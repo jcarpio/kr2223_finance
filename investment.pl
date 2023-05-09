@@ -61,7 +61,7 @@ solution(S):-
 
 total_month_ammount([],[], 0).
 total_month_ammount([1|Ms], [A|As], [NCD|NCDs], TT):- 
-  total_month_ammount(Ms, As, T),
+  total_month_ammount(Ms, As, NCDs, T),
   TT #= T + NCD*As.
 total_month_ammount([0|Ms], [_|As], NCDs, T):- 
-  total_month_ammount(Ms, As, T).
+  total_month_ammount(Ms, As, NCDs, T).
